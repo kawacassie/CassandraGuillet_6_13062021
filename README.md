@@ -12,6 +12,8 @@ Implémentation d'un modèle logique de données conformément à la réglementa
 
 ### Installation ###
 
+#### Général - Frontend ####
+
 Pour faire fonctionner le projet, vous devez installer :
 
     NodeJS en version 12.14 ou 14.0 
@@ -20,4 +22,16 @@ Pour faire fonctionner le projet, vous devez installer :
 
 Sur Windows, ces installations nécessitent d'utiliser PowerShell en tant qu'administrateur.
 
-Démarrer ng serve pour avoir accès au serveur de développement. Rendez-vous sur http://localhost:4200/
+#### Backend ####
+
+Depuis le dossier backend, lancez node avec npm start 
+
+Lancez le server avec nodemon server 
+
+Le serveur sera accessible sur http://localhost:3000/
+
+#### Serveur de développement ####
+
+Lancez le serveur avec ng serve
+
+Rendez-vous sur http://localhost:4200/
