@@ -1,5 +1,6 @@
 const jwt = require('jsonwebtoken');
 
+// Sécuriser les routes avec un token
 module.exports = (req, res, next) => {
   try {
     const token = req.headers.authorization.split(' ')[1];
