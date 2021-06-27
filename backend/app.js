@@ -7,9 +7,6 @@ const helmet = require('helmet');
 const sauceRoutes = require('./routes/sauce');
 const userRoutes = require('./routes/user');
 
-// Ajoute extra headers pour protéger les routes
-app.use(helmet());
-
 mongoose.connect('mongodb+srv://KawaCassie:Micromania44@cluster0.lxx95.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
@@ -17,6 +14,9 @@ mongoose.connect('mongodb+srv://KawaCassie:Micromania44@cluster0.lxx95.mongodb.n
   .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 const app = express();
+
+// Ajoute extra headers pour protéger les routes
+app.use(helmet());
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
