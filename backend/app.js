@@ -2,9 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
+const helmet = require('helmet');
 
 const sauceRoutes = require('./routes/sauce');
 const userRoutes = require('./routes/user');
+
+// Ajoute extra headers pour protéger les routes
+app.use(helmet());
 
 mongoose.connect('mongodb+srv://KawaCassie:Micromania44@cluster0.lxx95.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
   { useNewUrlParser: true,
