@@ -7,6 +7,7 @@ const helmet = require('helmet');
 const sauceRoutes = require('./routes/sauce');
 const userRoutes = require('./routes/user');
 
+// Connexion à la base de données 
 mongoose.connect('mongodb+srv://KawaCassie:Micromania44@cluster0.lxx95.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
@@ -18,6 +19,7 @@ const app = express();
 // Ajoute extra headers pour protéger les routes
 app.use(helmet());
 
+// Headers pour éviter les erreurs de CORS
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');

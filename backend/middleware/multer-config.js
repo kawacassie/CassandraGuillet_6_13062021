@@ -1,3 +1,4 @@
+// Middleware qui gère le téléchargement de fichiers
 const multer = require('multer');
 
 const MIME_TYPES = {

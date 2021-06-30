@@ -2,7 +2,7 @@ const http = require('http');
 const app = require('./app');
 const mongoSanitize = require("express-mongo-sanitize");
 
-// Empêcher les injections SQL
+// Empêcher les injections NoSQL
 app.use(mongoSanitize());
 
 const normalizePort = val => {
